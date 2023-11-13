@@ -1,0 +1,7 @@
+service: () -> {
+    ActualizaCertificado: (principal, text, text, text, text, text, text) -> (variant {Ok:principal; Err:variant {CertificaNoExiste:principal}});
+    borraCertificado: (principal) -> (variant {Ok:principal; Err:variant {CertificaNoExiste:principal}});
+    crearCertificado: (text, text, text, text, text, text) -> (principal);
+    leerCertificado: (principal) -> (opt record {modalidad:text; instructor:text; alumno:text; curso:text; lugar:text; usuario:principal; fecha:text}) query;
+    leerCertificados: () -> (record {ids:vec principal; Certificar:vec record {modalidad:text; instructor:text; alumno:text; curso:text; lugar:text; usuario:principal; fecha:text}}) query;
+}
